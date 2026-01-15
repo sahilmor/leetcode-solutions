@@ -11,9 +11,11 @@ jobs:
 
     steps:
       - name: Sync
-        uses: joshcai/leetcode-sync@v1.5
+        uses: joshcai/leetcode-sync@v1.7  # CHANGED to v1.7 (Latest Stable)
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           leetcode-csrf-token: ${{ secrets.LEETCODE_CSRF_TOKEN }}
           leetcode-session: ${{ secrets.LEETCODE_SESSION }}
-          destination-folder: solutions # The folder where code goes
+          destination-folder: solutions 
+          verbose: true
+          commit-header: '[LeetCode Sync]' # CHANGED: Removed invalid {placeholders}
